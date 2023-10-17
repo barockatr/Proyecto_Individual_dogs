@@ -1,0 +1,37 @@
+/* LandingPage.css */
+
+/* Estilo para el contenedor principal */
+.landing-page {
+    background-color: #f0f0f0; /* Color de fondo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Altura de la pantalla completa */
+  }
+  
+  /* Estilo para la imagen de fondo */
+  .background-image {
+    background-image: url('tu-imagen-de-fondo.jpg'); /* Ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Estilo para el botón */
+  .enter-button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .enter-button:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
+  }
+  
