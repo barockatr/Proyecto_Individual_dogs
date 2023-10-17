@@ -1,0 +1,18 @@
+{
+    "solicitud_1": {
+      "method": "GET",
+      "url": "http://localhost:3000/ruta/1"
+    },
+    "solicitud_2": {
+      "method": "POST",
+      "url": "http://localhost:3000/ruta/2",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "nombre": "Ejemplo",
+        "edad": 30
+      }
+    }
+  }
+  

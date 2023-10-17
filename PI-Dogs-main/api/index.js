@@ -20,9 +20,15 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
-// Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
-    console.log('%s listening at 3001'); // eslint-disable-line no-console
+const PORT = process.env.PORT || 3001; // Utiliza el puerto definido en el entorno o el puerto 3001 por defecto
+
+// Sincroniza los modelos de la base de datos. No es necesario utilizar 'force: true' en un entorno de producción.
+conn.sync()
+  .then(() => {
+    server.listen(PORT, () => {
+      console.log(`Servidor en ejecución en el puerto ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.error('Error al sincronizar la base de datos:', error);
   });
-});
